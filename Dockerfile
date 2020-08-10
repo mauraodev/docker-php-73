@@ -18,7 +18,7 @@ RUN apt-get update \
   libzip-dev \
   zip
 
-RUN docker-php-ext-install zip gd soap exif
+RUN docker-php-ext-install zip gd soap exif mysqli pdo_mysql
 
 RUN curl https://phar.phpunit.de/phpunit.phar -L > phpunit.phar \
   && chmod +x phpunit.phar \
